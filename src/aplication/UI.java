@@ -1,6 +1,5 @@
 package aplication;
 
-import java.nio.file.DirectoryStream.Filter;
 import java.util.Arrays;
 import java.util.InputMismatchException;
 import java.util.List;
@@ -58,6 +57,9 @@ public class UI {
 		printCapturedPieces(captured);
 		System.out.println("Turn: " + chessMatch.getTurn());
 		System.out.println("Waiting Player: " + chessMatch.getCurrentPlayer());
+		if(chessMatch.getCheck()) {
+			System.out.println("CHECK!");
+		}
 	}
 
 	public static void printBoard(ChessPiece[][] pieces) {
